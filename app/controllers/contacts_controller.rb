@@ -5,4 +5,9 @@ class ContactsController < ApplicationController
     render json: {message: contact.as_json}
   end
 
+  def show_all
+    contact_all = Contact.all
+    render json: {message: contact_all.as_json}
+  end
+
 end
